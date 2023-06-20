@@ -1,5 +1,23 @@
-import '@/styles/globals.css'
+import NavBar from "@/components/NavBar";
+import React from "react";
+import "../styles/globals.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const App = ({ Component, pageProps }) => {
+  return (
+    <>
+      <NavBar />
+      <Component {...pageProps} />
+      <h1>hello</h1>
+      <style jsx global>
+        {`
+          span {
+            color: blue;
+            cursor: pointer;
+          }
+        `}
+      </style>
+    </>
+  );
+};
+
+export default App;
