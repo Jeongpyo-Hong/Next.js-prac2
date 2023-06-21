@@ -3,7 +3,11 @@ import Seo from "@/components/Seo";
 import React from "react";
 
 const Detail = ({ params }) => {
-  // const router = useRouter();
+  /*
+   * 빈 배열을 추가한 이유
+   * 페이지 로드 시, html이 먼저 로드 되고 js파일이 로드 되는데,
+   * js파일이 로드되기 전 오류를 방지하기 위해 빈 배열을 추가하였음
+   */
   const [title, id] = params || [];
 
   return (
