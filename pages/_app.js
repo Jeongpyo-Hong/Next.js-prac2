@@ -1,21 +1,13 @@
-import NavBar from "@/components/NavBar";
 import React from "react";
 import "../styles/globals.css";
+import Layout from "@/components/Layout";
 
 const App = ({ Component, pageProps }) => {
   return (
     <>
-      <NavBar />
-      <Component {...pageProps} />
-      <h1>hello</h1>
-      <style jsx global>
-        {`
-          span {
-            color: blue;
-            cursor: pointer;
-          }
-        `}
-      </style>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 };
