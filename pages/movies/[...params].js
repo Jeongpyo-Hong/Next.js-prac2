@@ -21,11 +21,9 @@ const Detail = ({ params }) => {
 export default Detail;
 
 export const getServerSideProps = ({ params: { params } }) => {
-  const [title, id] = params;
-
   return {
     props: {
-      title,
+      params,
     },
   };
 };
